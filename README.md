@@ -1,7 +1,6 @@
 # azcopy-tool
 
-This repository hosts the Linux `azcopy` binary that the Nextflow
-[Azure plugin](https://github.com/nextflow-io/nextflow/tree/master/plugins/nf-azure) installs on Azure Batch nodes and tasks.
+This repository hosts the Linux `azcopy` binary that the Nextflow [nf-azure plugin](https://github.com/nextflow-io/nextflow/tree/master/plugins/nf-azure) installs on Azure Batch nodes and tasks.
 
 Microsoft distributes AzCopy for Linux only as a `.tar.gz` archive. Nextflow downloads a plain binary instead, so that `azure.batch.copyToolInstallMode = 'task'` works in task containers that do not provide `tar`.
 
@@ -14,14 +13,6 @@ Each version is published as a tag. Nextflow downloads the binary from a tag URL
 ```
 https://github.com/nextflow-io/azcopy-tool/raw/<tag>/azcopy
 ```
-
-| Tag | AzCopy version | Used by Nextflow |
-|---|---|---|
-| `linux_amd64_10.34.1` | 10.34.1 | Pending |
-| `linux_amd64_10.13.0` | 10.13.0 | No |
-| `linux_amd64_10.8.0` | 10.8.0 | Yes |
-
-The `master` branch contains the latest binary. Do not reference `master` from Nextflow; always pin a tag.
 
 Released Nextflow versions depend on these tags. Never move, rewrite, or delete an existing tag.
 
